@@ -41,7 +41,7 @@ if(args.z) {
 }
 
 let day = 1;
-if(args.d) {
+if(args.d || args.d==0) {
     day = args.d;
 }
 
@@ -58,6 +58,7 @@ if(data.daily.precipitation_hours[day] != 0){
 } else {
     result = "You probably won't need your galoshes ";
 }
+
 if (day == 0) {
   result += "today.";
 } else if (day > 1) {
